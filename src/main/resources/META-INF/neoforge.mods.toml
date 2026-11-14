@@ -1,0 +1,42 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/jaredlll08/CreateTweaker/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "Jared, xulai"
+description = '''
+在 ZenScript 里添加、移除和修改机械动力（Create）的配方：粉碎、切削、压板、搅拌、压实、注液、排液、鼓风机洗涤/缠魂、机械手应用、动力合成、序列组装。
+Add, remove and modify Create recipes from ZenScript: crushing, cutting, pressing, mixing, compacting, filling, emptying, splashing, haunting, item application, mechanical crafting and sequenced assembly.
+'''
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neo_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "crafttweaker"
+type = "required"
+versionRange = "${crafttweaker_version_range}"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "create"
+type = "required"
+versionRange = "${create_version_range}"
+ordering = "AFTER"
+side = "BOTH"

@@ -1,0 +1,22 @@
+package com.xulai.createtweaker.natives.recipe;
+
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import com.simibubi.create.content.fluids.transfer.FillingRecipe;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import org.openzen.zencode.java.ZenCodeType;
+
+@ZenRegister
+@Document("mods/CreateTweaker/recipe/type/FillingRecipe")
+@NativeTypeRegistration(value = FillingRecipe.class, zenCodeName = "mods.createtweaker.FillingRecipe")
+public class ExpandFillingRecipe {
+
+    @ZenCodeType.Method
+    @ZenCodeType.Getter("requiredFluid")
+    public static SizedFluidIngredient getRequiredFluid(FillingRecipe internal) {
+
+        return internal.getRequiredFluid();
+    }
+
+}
